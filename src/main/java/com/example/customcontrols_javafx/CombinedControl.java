@@ -4,16 +4,16 @@ import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.util.Locale;
 
-public class CombinedControl extends HBox {
+public class CombinedControl extends VBox {
     private TextField textField;
     private Button button;
     // ******************** Constructors **************************************
     public CombinedControl() {
-        getStylesheets().add(CombinedControl.class.getResource("combined.css").toExternalForm());
+        getStylesheets().add(CombinedControl.class.getResource("style/combined.css").toExternalForm());
         initGraphics();
         registerListeners();
     }
@@ -27,7 +27,6 @@ public class CombinedControl extends HBox {
         button.setFocusTraversable(false);
         setSpacing(0);
         setFocusTraversable(true);
-        setFillHeight(false);
         setAlignment(Pos.CENTER);
         getChildren().addAll(textField, button);
     }
